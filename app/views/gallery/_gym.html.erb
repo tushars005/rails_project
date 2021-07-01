@@ -1,0 +1,23 @@
+<%# <h1>Gallery#index</h1>
+<p>Find me in app/views/gallery/index.html.erb</p> %>
+
+<table>
+
+<tr>
+<% count=0 %>
+<% @gym.each do |gym|%>
+
+<% if (count % 3) == 0%>
+</tr>
+<tr>
+<% end %>
+<% count+=1 %>
+<td><%= image_tag gym.product_image ,:height=>"100",:width=>"100" %><br />
+Name : <%= gym.name %><br />
+Color :<%= gym.body_part %><br />
+Size : <%= gym.description %><br />
+Price : <%= gym.price %>
+<%= button_to 'Add to Cart', line_items_path(:store_id => gym.id)%> </td>
+<% end %>
+</tr>
+</table>

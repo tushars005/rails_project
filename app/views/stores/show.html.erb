@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Body part:</strong>
+  <%= @store.body_part %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @store.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @store.description %>
+</p>
+
+<%= image_tag @store.product_image, :height=>"200", :width=>"200"  %> <br>
+
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+
+<%= link_to 'Back', stores_path %>
